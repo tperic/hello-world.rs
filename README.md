@@ -9,6 +9,14 @@
 
 🚀 This project is very minimal, it only requires 804 crates 🚀
 
+### Installation
+To compile this project you only need:
+
+1. The [cairo development libraries](https://www.cairographics.org/download/) for cairo-sys.
+1. The [libgtk development libraries](https://www.gtk.org/docs/installations/) for pango-sys.
+
+Then you can just `cargo build --release` and the compiled executable should be located in `./target/release/hello-world.rs`.
+
 
 ### Why rust(🚀) while its only 1 line and depends on 600 c bind crates?
 > People ask the question "what's rust(🚀) good for?" pretty frequently, and little terminal apps like this are precisely the reason. [...]. It enables a kind of workflow that simply didn't exist before: I could have a fully safe, "correct", LLVM-optimized binary installed on my desktop in an afternoon.🚀
