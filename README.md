@@ -11,8 +11,9 @@
 
 ### Installation
 To compile this project you only need:
-0. The [cairo development libraries](https://www.cairographics.org/download/) for cairo-sys.
-0. The [libgtk development libraries](https://www.gtk.org/docs/installations/) for pango-sys.
+
+1. The [cairo development libraries](https://www.cairographics.org/download/) for cairo-sys.
+1. The [libgtk development libraries](https://www.gtk.org/docs/installations/) for pango-sys.
 
 Then you can just `cargo build --release` and the compiled executable should be located in `./target/release/hello-world.rs`.
 
