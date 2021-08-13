@@ -3,8 +3,9 @@ use r_i18n::I18nConfig;
 use r_i18n::I18n;
 
 fn main() {
-    let config: I18nConfig = I18nConfig{locales: &["en", "es", "ru", "bg", "pt"], directory: "translations"};
+    let config: I18nConfig = I18nConfig{locales: &["bg", "de", "en", "es", "ie", "jp", "pl", "pt", "ru"], directory: "translations"};
     let r_i18n: I18n = I18n::configure(&config);
-
-    unsafe { println!("{}", r_i18n.t("msg")); }
+    unsafe { 
+        println!("{}", r_i18n.t("msg")); 
+    }
 }
