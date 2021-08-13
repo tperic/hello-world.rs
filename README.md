@@ -7,7 +7,7 @@
 
 🚀 While this depends on more c code than rust(🚀) code to compile, because rust(🚀) is magically memory safe, now all c code is memory safe too 🚀
 
-🚀 This project is very minimal, it only requires 724 crates 🚀
+🚀 This project is very minimal, it only requires 804 crates 🚀
 
 
 ### Why rust(🚀) while its only 1 line and depends on 600 c bind crates?
