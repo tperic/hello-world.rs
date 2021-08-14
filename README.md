@@ -16,6 +16,8 @@ To compile this project you only need:
 1. The [libgtk development libraries](https://www.gtk.org/docs/installations/) for pango-sys.
 
 Then you can just `cargo build --release` and the compiled executable should be located in `./target/release/hello-world`.
+Due to the lightweightness of rust, unlike node_modules being fairly large for few dependencies, rust manages compile caches efficiently and stores them to storage to save compile times! Just 33G target folder
+![image](https://user-images.githubusercontent.com/57838468/129435501-01b755d3-1369-4efa-816b-798a5e08790a.png)
 
 
 ### Why rust(🚀) while its only 1 line and depends on 600 c bind crates?
