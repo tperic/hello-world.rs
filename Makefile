@@ -10,3 +10,7 @@ install:
 uninstall:
 	@rm -f /usr/local/bin/hello-world
 
+test: tests
+
+tests:
+	@cargo test
