@@ -19,7 +19,12 @@ To compile this project you need only few libraries:
 Just 1 lib as you can see the number along the names
 
 Then you can just `cargo build --release` and the compiled executable should be located in `./target/release/hello-world`.
-Due to the lightweightness of rust, unlike node_modules being fairly large for few dependencies, rust manages compile caches efficiently and stores them to storage to save compile times! Just 33G target folder
+A clean build makes it take around 3.8G
+
+![image](https://user-images.githubusercontent.com/57838468/129442903-8dd8ed8a-4afe-43f4-80b3-c082fb72f581.png)
+
+
+Due to the lightweightness of rust, unlike node_modules being quite large for just few dependencies, rust manages compile caches efficiently and stores them to storage to save compile times! Just 33G target folder after few builds
 
 ![image](https://user-images.githubusercontent.com/57838468/129435501-01b755d3-1369-4efa-816b-798a5e08790a.png)
 
