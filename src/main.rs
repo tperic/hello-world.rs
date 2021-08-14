@@ -191,3 +191,23 @@ fn main() {
         println!("{}", r_i18n.t("msg")); 
     }
 }
+
+
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+#[test]
+    fn solarsystem_level_enterprise_test() {
+        assert_eq!(1, 1);
+    }
+
+#[test]
+    fn universe_level_enterprise_test() {
+        let config: I18nConfig = I18nConfig{locales: &["en", "bg", "de", "es", "fr",  "ie", "jp", "pl", "pt", "ru"], directory: "translations"};
+        let r_i18n: I18n = I18n::configure(&config);
+        let content =  r_i18n.t("msg"); // efficiently caching i18n result to save function calls!
+        assert_eq!(content, content );
+    }
+}
