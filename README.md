@@ -7,7 +7,7 @@
 
 🚀 While this depends on more c code than rust(🚀) code to compile, because rust(🚀) is magically memory safe, now all c code is memory safe too 🚀
 
-🚀 This project is very minimal, it only requires 804 crates 🚀
+🚀 This project is very minimal, it only requires 974 crates 🚀
 
 
 ### Why rust(🚀) while its only 1 line and depends on 600 c bind crates?
@@ -35,13 +35,15 @@
 
 > I am too dumb to write c code, even if I spend more time on rust(🚀) writing bad code its rust(🚀), so its better🚀
 
-> Without really understanding anything about rust(🚀), its cool to hangout in discord.gg/rust(🚀) and beilive accept anything they tell🚀
+> Without really understanding anything about rust(🚀), its cool to hangout in discord.gg/rust(🚀) and believe that anything they tell is the right opinion🚀
 
 > I wish I had a compiler (one as informative as rust(🚀)'s would be amazing) but for Japanese. If I could learn Japanese the way I learn programming I'd be conversationally fluent by now.🚀
 
 > rust(🚀) held onto it’s spot as the most beloved language among the professional developers we surveyed. That said, the majority of developers who took the survey aren’t familiar with the language.🚀
 
-> I've experienced modern package management through Cargo and anything below that level now seems like returning to stone age.
+> I've experienced modern package management through Cargo and anything below that level now seems like returning to stone age.🚀
+
+> C in "c programming language" stands for cringe
 
 > Wait its only time until rust(🚀) makes assembly memroy safe.🚀
 
