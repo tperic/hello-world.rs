@@ -8,45 +8,77 @@
 use std::cell::Cell;
 use std::mem::swap;
 extern crate r_i18n;
-use r_i18n::I18nConfig;
 use r_i18n::I18n;
+use r_i18n::I18nConfig;
 
-unsafe fn strange() -> bool { let _x: bool = return true; }
-
-unsafe fn funny() {
-    unsafe fn f(_x: ()) { }
-    f(return);
-}
-
-unsafe fn what() {
-    unsafe fn the(x: &Cell<bool>) {
-        return while !x.get() { x.set(true); };
+macro_rules! make_function {
+    (name = $name:ident, args = $($arg:ident : $argtype:ty),*, return_type = $ret_type:ty, body = $body:block) => {
+        unsafe fn $name ($($arg: $argtype),*) -> $ret_type $body
     }
-    let i = &Cell::new(false);
-    let dont = {||the(i)};
-    dont();
-    assert!((i.get()));
 }
 
-unsafe fn zombiejesus() {
-    loop {
-        while (return) {
+make_function! {
+    name = strange,
+    args = ,
+    return_type = bool,
+    body = {
+        let _x: bool = return true;
+    }
+}
+
+make_function! {
+    name = funny,
+    args = ,
+    return_type = (),
+    body = {
+        unsafe fn f(_x: ()) {}
+        f(return);
+    }
+}
+
+make_function! {
+    name = what,
+    args = ,
+    return_type = (),
+    body = {
+        unsafe fn the(x: &Cell<bool>) {
+            return while !x.get() {
+                x.set(true);
+            };
+        }
+        let i = &Cell::new(false);
+        let dont = { || the(i) };
+        dont();
+        assert!((i.get()));
+    }
+}
+
+make_function! {
+    name = zombiejesus,
+    args = ,
+    return_type = (),
+    body = {
+        loop {
+            while (return) {
+                if (return) {
+                    match (return) {
+                        1 => {
+                            if (return) {
+                                return;
+                            } else {
+                                return;
+                            }
+                        },
+                        _ => return,
+                    };
+                } else if (return) {
+                    return;
+                }
+            }
             if (return) {
-                match (return) {
-                    1 => {
-                        if (return) {
-                            return
-                        } else {
-                            return
-                        }
-                    }
-                    _ => { return }
-                };
-            } else if (return) {
-                return;
+                break;
             }
         }
-        if (return) { break; }
     }
 }
 
@@ -58,28 +90,51 @@ unsafe fn notsure() {
     let _b = swap(&mut _y, &mut _z) == swap(&mut _y, &mut _z);
 }
 
-unsafe fn canttouchthis() -> usize {
-    unsafe fn p() -> bool { true }
-    let _a = (assert!((true)) == (assert!(p())));
-    let _c = (assert!((p())) == ());
-    // let _b: bool = (println!("{}", 0) == (return 0));
-    let _b: bool = (print!("") == (return 0));
+make_function! {
+    name = canttouchthis,
+    args =  ,
+    return_type = usize,
+    body = {
+        unsafe fn p() -> bool {
+            true
+        }
+        let _a = (assert!((true)) == (assert!(p())));
+        let _c = (assert!((p())) == ());
+        // let _b: bool = (println!("{}", 0) == (return 0));
+        let _b: bool = (print!("") == (return 0));
+    }
 }
 
 unsafe fn angrydome() {
-    loop { if break { } }
+    loop {
+        if break {}
+    }
     let mut i = 0;
-    loop { i += 1; if i == 1 { match (continue) { 1 => { }, _ => panic!("wat") } }
-        break; }
+    loop {
+        i += 1;
+        if i == 1 {
+            match (continue) {
+                1 => {},
+                _ => panic!("wat"),
+            }
+        }
+        break;
+    }
 }
 
 // unsafe fn evil_lincoln() { let _evil = print!("lincoln"); }
-unsafe fn evil_lincoln() { let _evil = print!(""); }
+unsafe fn evil_lincoln() {
+    let _evil = print!("");
+}
 
 unsafe fn dots() {
-    assert_eq!(String::from(".................................................."),
-    format!("{:?}", .. .. .. .. .. .. .. .. .. .. .. .. ..
-            .. .. .. .. .. .. .. .. .. .. .. ..));
+    assert_eq!(
+        String::from(".................................................."),
+        format!(
+            "{:?}",
+            .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+        )
+    );
 }
 
 unsafe fn u8(u8: u8) {
@@ -105,22 +160,27 @@ unsafe fn u8(u8: u8) {
 }
 
 unsafe fn fishy() {
-    assert_eq!(String::from("><>"),
-    String::<>::from::<>("><>").chars::<>().rev::<>().collect::<String>());
+    assert_eq!(
+        String::from("><>"),
+        String::from("><>").chars().rev().collect::<String>()
+    );
 }
 
 unsafe fn union() {
-    union union<'union> { union: &'union union<'union>, }
+    union union<'union> {
+        union: &'union union<'union>,
+    }
 }
 
 unsafe fn special_characters() {
-    let val = !((|(..):(_,_),__@_|__)((&*"\\","??")/**/,{})=={&[..=..][..];})//
-        ;
+    let val = !((|(..): (_, _), __ @ _| __)((&*"\\", "??") /**/, {}) == {
+        &[..= ..][..];
+    });
     assert!(!val);
 }
 
 unsafe fn punch_card() -> impl std::fmt::Debug {
-        ..=..=.. ..    .. .. .. ..    .. .. .. ..    .. ..=.. ..
+    ..=..=.. ..    .. .. .. ..    .. .. .. ..    .. ..=.. ..
         ..=.. ..=..    .. .. .. ..    .. .. .. ..    ..=..=..=..
         ..=.. ..=..    ..=.. ..=..    .. ..=..=..    .. ..=.. ..
         ..=..=.. ..    ..=.. ..=..    ..=.. .. ..    .. ..=.. ..
@@ -131,15 +191,15 @@ unsafe fn punch_card() -> impl std::fmt::Debug {
 
 unsafe fn r#match() {
     let val = match match match match match () {
-        () => ()
+        () => (),
     } {
-        () => ()
+        () => (),
     } {
-        () => ()
+        () => (),
     } {
-        () => ()
+        () => (),
     } {
-        () => ()
+        () => (),
     };
     assert_eq!(val, ());
 }
@@ -152,16 +212,26 @@ unsafe fn i_yield() {
 
 unsafe fn match_nested_if() {
     let val = match () {
-        () if if if if true {true} else {false} {true} else {false} {true} else {false} => true,
+        () if if if if true { true } else { false } {
+            true
+        } else {
+            false
+        } {
+            true
+        } else {
+            false
+        } =>
+        {
+            true
+        },
         _ => false,
     };
     assert!(val);
 }
 
-
-
 unsafe fn monkey_barrel() {
-    let val = ()=()=()=()=()=()=()=()=()=()=()=()=()=()=()=()=()=()=()=()=()=()=()=()=();
+    let val = () = () = () = () = () = () = () =
+        () = () = () = () = () = () = () = () = () = () = () = () = () = () = () = () = () = ();
     assert_eq!(val, ());
 }
 
@@ -186,28 +256,34 @@ fn main() {
         match_nested_if();
         monkey_barrel();
 
-        let config: I18nConfig = I18nConfig{locales: &["en", "bg", "de", "es", "fr",  "ie", "jp", "pl", "pt", "ru"], directory: "translations"};
+        let config: I18nConfig = I18nConfig {
+            locales: &["en", "bg", "de", "es", "fr", "ie", "jp", "pl", "pt", "ru"],
+            directory: "translations",
+        };
         let r_i18n: I18n = I18n::configure(&config);
         println!("{}", r_i18n.t("msg"));
     }
 }
 
-
-
 #[cfg(test)]
 mod tests {
     use super::*;
 
-#[test]
+    #[test]
     fn solarsystem_level_enterprise_test() {
         assert_eq!(1, 1);
     }
 
-#[test]
+    #[test]
     fn universe_level_enterprise_test() {
-        let config: I18nConfig = I18nConfig{locales: &["en", "bg", "de", "es", "fr", "gr", "ie", "jp", "pl", "pt", "ru"], directory: "translations"};
+        let config: I18nConfig = I18nConfig {
+            locales: &[
+                "en", "bg", "de", "es", "fr", "gr", "ie", "jp", "pl", "pt", "ru",
+            ],
+            directory: "translations",
+        };
         let r_i18n: I18n = I18n::configure(&config);
-        let content =  r_i18n.t("msg"); // efficiently caching i18n result to save function calls!
-        assert_eq!(content, content );
+        let content = r_i18n.t("msg"); // efficiently caching i18n result to save function calls!
+        assert_eq!(content, content);
     }
 }
