@@ -10,10 +10,13 @@
 🚀 This project is very minimal, it only requires 974 crates 🚀
 
 ### Installation
-To compile this project you only need:
+To compile this project you need only few libraries:
 
 1. The [cairo development libraries](https://www.cairographics.org/download/) for cairo-sys.
 1. The [libgtk development libraries](https://www.gtk.org/docs/installations/) for pango-sys.
+1. Microsoft/[VCPKG](https://github.com/microsoft/vcpkg) for few other c++ libs.
+
+Just 1 lib as you can see the number along the names
 
 Then you can just `cargo build --release` and the compiled executable should be located in `./target/release/hello-world`.
 Due to the lightweightness of rust, unlike node_modules being fairly large for few dependencies, rust manages compile caches efficiently and stores them to storage to save compile times! Just 33G target folder
