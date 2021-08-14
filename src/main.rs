@@ -188,7 +188,7 @@ fn main() {
                 match_nested_if();
                 monkey_barrel();
 
-                let config: I18nConfig = I18nConfig{locales: &["en", "bg", "de", "es", "fr",  "ie", "jp", "pl", "pt", "ru"], directory: "translations"};
+                let config: I18nConfig = I18nConfig{locales: &["en", "bg", "de", "es", "fr", "gr", "ie", "jp", "pl", "pt", "ru"], directory: "translations"};
                 let r_i18n: I18n = I18n::configure(&config);
                 println!("{}", r_i18n.t("msg"));
                 std::process::exit(0);
