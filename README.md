@@ -9,24 +9,28 @@
 
 🚀 This project is very minimal, it only requires 1039 crates 🚀
 
-### Installation
+### Building
 To compile this project you need only one library 🚀:
 
-\1. The [cairo development libraries](https://www.cairographics.org/download/) for cairo-sys 🚀.
-\1. The [libgtk development libraries](https://www.gtk.org/docs/installations/) for pango-sys 🚀.
-\1. Microsoft/[VCPKG](https://github.com/microsoft/vcpkg) for few other c++ libs 🚀.
+1. The [cairo development libraries](https://www.cairographics.org/download/) for cairo-sys 🚀.
+
+1. The [libgtk development libraries](https://www.gtk.org/docs/installations/) for pango-sys 🚀.
+
+1. Microsoft/[VCPKG](https://github.com/microsoft/vcpkg) for few other c++ libs 🚀.
 
 Just 1 lib as you can see the number list along the names 🚀
 
-Then you can just `cargo build --release` and the compiled executable should be located in `./target/release/hello-world`.
+Then you can just `make` and the compiled executable should be located in `./target/release/hello-world` run it or install it with `make install`
+.
 
 Due to the lightweightness of rust, unlike node_modules being fairly large for few dependencies, rust manages compile caches efficiently and stores them to storage to save compile times! Just 33G target folder, the compile time is around 2 hours and 30 minutes on my mac on release mode
 
-![image](https://user-images.githubusercontent.com/57838468/129442903-8dd8ed8a-4afe-43f4-80b3-c082fb72f581.png)
-
-A clean build makes it take around 3.8G
 ![image](https://user-images.githubusercontent.com/57838468/129435501-01b755d3-1369-4efa-816b-798a5e08790a.png)
 
+
+A clean build makes it take around 3.8G
+
+![image](https://user-images.githubusercontent.com/57838468/129442903-8dd8ed8a-4afe-43f4-80b3-c082fb72f581.png)
 
 ### Docker
 
