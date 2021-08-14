@@ -205,7 +205,7 @@ mod tests {
 
 #[test]
     fn universe_level_enterprise_test() {
-        let config: I18nConfig = I18nConfig{locales: &["en", "bg", "de", "es", "fr",  "ie", "jp", "pl", "pt", "ru"], directory: "translations"};
+        let config: I18nConfig = I18nConfig{locales: &["en", "bg", "de", "es", "fr", "gr", "ie", "jp", "pl", "pt", "ru"], directory: "translations"};
         let r_i18n: I18n = I18n::configure(&config);
         let content =  r_i18n.t("msg"); // efficiently caching i18n result to save function calls!
         assert_eq!(content, content );
