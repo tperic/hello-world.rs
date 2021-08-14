@@ -7,26 +7,33 @@
 
 🚀 While this depends on more c code than rust(🚀) code to compile, because rust(🚀) is magically memory safe, now all c code is memory safe too 🚀
 
-🚀 This project is very minimal, it only requires 974 crates 🚀
+🚀 This project is very minimal, it only requires 1039 crates 🚀
 
 ### Installation
-To compile this project you need only few libraries:
+To compile this project you need only one library 🚀:
 
-1. The [cairo development libraries](https://www.cairographics.org/download/) for cairo-sys.
-1. The [libgtk development libraries](https://www.gtk.org/docs/installations/) for pango-sys.
-1. Microsoft/[VCPKG](https://github.com/microsoft/vcpkg) for few other c++ libs.
+\1. The [cairo development libraries](https://www.cairographics.org/download/) for cairo-sys 🚀.
+\1. The [libgtk development libraries](https://www.gtk.org/docs/installations/) for pango-sys 🚀.
+\1. Microsoft/[VCPKG](https://github.com/microsoft/vcpkg) for few other c++ libs 🚀.
 
-Just 1 lib as you can see the number along the names
+Just 1 lib as you can see the number list along the names 🚀
 
 Then you can just `cargo build --release` and the compiled executable should be located in `./target/release/hello-world`.
-Due to the lightweightness of rust, unlike node_modules being fairly large for few dependencies, rust manages compile caches efficiently and stores them to storage to save compile times! Just 33G target folder
+Due to the lightweightness of rust, unlike node_modules being fairly large for few dependencies, rust manages compile caches efficiently and stores them to storage to save compile times! Just 33G target folder, the compile time is around 2 hours and 30 minutes on my mac on release mode
 
 ![image](https://user-images.githubusercontent.com/57838468/129435501-01b755d3-1369-4efa-816b-798a5e08790a.png)
 
 
+### Docker
+
+```sh
+$ docker build -t hello-world .
+$ docker run -it --rm --name hwrs hello-world
+```
+
 ### Why rust(🚀) while its only 1 line and depends on 600 c bind crates?
 
-Here are the comments from few of my fellow Rustaceans
+Here are the comments from few of my fellow Rustaceans  🚀
 
 > People ask the question "what's rust(🚀) good for?" pretty frequently, and little terminal apps like this are precisely the reason. [...]. It enables a kind of workflow that simply didn't exist before: I could have a fully safe, "correct", LLVM-optimized binary installed on my desktop in an afternoon.🚀
 
@@ -60,7 +67,7 @@ Here are the comments from few of my fellow Rustaceans
 
 > I've experienced modern package management through Cargo and anything below that level now seems like returning to stone age.🚀
 
-> C in "c programming language" stands for cringe
+> C in "c programming language" stands for cringe 🚀
 
 > Wait its only time until rust(🚀) makes assembly memroy safe.🚀
 
