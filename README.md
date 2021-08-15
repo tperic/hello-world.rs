@@ -9,25 +9,36 @@
 
 🚀 This project is very minimal, it only requires 1039 crates 🚀
 
-### Installation
+### Building
 To compile this project you need only one library 🚀:
 
-<div>1. The <a href="https://www.cairographics.org/download/">cairo development libraries</a> for cairo-sys 🚀.</div>
-<div>1. The <a href="https://www.gtk.org/docs/installations/">libgtk development libraries</a> for pango-sys 🚀.</div>
-<div>1. Microsoft/<a href="https://github.com/microsoft/vcpkg">VCPKG</a> for few other c++ libs 🚀.</div>
+<div>1. <a href="https://www.cairographics.org/download/">cairo development libraries</a> 🚀.</div>
+<div>1. <a href="https://www.gtk.org/docs/installations/">libgtk development libraries</a> 🚀.</div>
+<div>1. alsa-lib 🚀</div>
+<div>1. glfw 🚀</div>
+<div>1. freetype 🚀</div>
+<div>1. libglib 🚀</div>
+<div>1. pango 🚀</div>
+<div>1. atk 🚀</div>
+<div>1. pixbuf 🚀</div>
+<div>1. gdk 🚀</div>
 </br>
 <div>Just 1 lib as you can see the number list along the names 🚀</div>
 </br>
 
-Then you can just `cargo build --release` and the compiled executable should be located in `./target/release/hello-world`.
+You probably have most of them already, if it says something along the words, you know what to search for now
+
+Then you can just `make` and the compiled executable should be located in `./target/release/hello-world` run it or install it with `make install`
+.
 
 Due to the lightweightness of rust, unlike node_modules being fairly large for few dependencies, rust manages compile caches efficiently and stores them to storage to save compile times! Just 33G target folder, the compile time is around 2 hours and 30 minutes on my mac on release mode
 
-![image](https://user-images.githubusercontent.com/57838468/129442903-8dd8ed8a-4afe-43f4-80b3-c082fb72f581.png)
-
-A clean build makes it take around 3.8G
 ![image](https://user-images.githubusercontent.com/57838468/129435501-01b755d3-1369-4efa-816b-798a5e08790a.png)
 
+
+A clean build makes it take around 3.8G
+
+![image](https://user-images.githubusercontent.com/57838468/129442903-8dd8ed8a-4afe-43f4-80b3-c082fb72f581.png)
 
 ### Docker
 
