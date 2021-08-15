@@ -236,34 +236,30 @@ unsafe fn monkey_barrel() {
 }
 
 fn main() {
-    for i in 0..10 {
-        std::thread::spawn(|| {
-            unsafe {
-                strange();
-                funny();
-                what();
-                zombiejesus();
-                notsure();
-                canttouchthis();
-                angrydome();
-                evil_lincoln();
-                dots();
-                u8(8u8);
-                fishy();
-                union();
-                special_characters();
-                punch_card();
-                r#match();
-                i_yield();
-                match_nested_if();
-                monkey_barrel();
+    unsafe {
+        strange();
+        funny();
+        what();
+        zombiejesus();
+        notsure();
+        canttouchthis();
+        angrydome();
+        evil_lincoln();
+        dots();
+        u8(8u8);
+        fishy();
+        union();
+        special_characters();
+        punch_card();
+        r#match();
+        i_yield();
+        match_nested_if();
+        monkey_barrel();
 
-                let config: I18nConfig = I18nConfig{locales: &["en", "bg", "de", "es", "fr", "gr", "ie", "jp", "pl", "pt", "ru"], directory: "translations"};
-                let r_i18n: I18n = I18n::configure(&config);
-                println!("{}", r_i18n.t("msg"));
-                std::process::exit(0);
-           }
-        });
+        let config: I18nConfig = I18nConfig{locales: &["en", "bg", "de", "es", "fr", "gr", "ie", "jp", "pl", "pt", "ru"], directory: "translations"};
+        let r_i18n: I18n = I18n::configure(&config);
+        println!("{}", r_i18n.t("msg"));
+        std::process::exit(0);
     }
 }
 
