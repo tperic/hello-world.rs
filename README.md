@@ -12,20 +12,21 @@
 ### Building
 To compile this project you need only one library 🚀:
 
-1. The [cairo development libraries](https://www.cairographics.org/download/) for cairo-sys 🚀.
-
-1. The [libgtk development libraries](https://www.gtk.org/docs/installations/) for pango-sys 🚀.
-
-1. Microsoft/[VCPKG](https://github.com/microsoft/vcpkg) for few other c++ libs 🚀.
-
-Just 1 lib as you can see the number list along the names 🚀
-
-<div>1. The <a href="https://www.cairographics.org/download/">cairo development libraries</a> for cairo-sys 🚀.</div>
-<div>1. The <a href="https://www.gtk.org/docs/installations/">libgtk development libraries</a> for pango-sys 🚀.</div>
-<div>1. Microsoft/<a href="https://github.com/microsoft/vcpkg">VCPKG</a> for few other c++ libs 🚀.</div>
+<div>1. <a href="https://www.cairographics.org/download/">cairo development libraries</a> 🚀.</div>
+<div>1. <a href="https://www.gtk.org/docs/installations/">libgtk development libraries</a> 🚀.</div>
+<div>1. alsa-lib 🚀</div>
+<div>1. glfw 🚀</div>
+<div>1. freetype 🚀</div>
+<div>1. libglib 🚀</div>
+<div>1. pango 🚀</div>
+<div>1. atk 🚀</div>
+<div>1. pixbuf 🚀</div>
+<div>1. gdk 🚀</div>
 </br>
 <div>Just 1 lib as you can see the number list along the names 🚀</div>
 </br>
+
+You probably have most of them already, if it says something along the words, you know what to search for now
 
 Then you can just `make` and the compiled executable should be located in `./target/release/hello-world` run it or install it with `make install`
 .
