@@ -83,7 +83,7 @@ Here are the comments from few of my fellow Rustaceans  🚀
 
 > I've experienced modern package management through Cargo and anything below that level now seems like returning to stone age.🚀
 
-> C in "c programming language" stands for cringe 🚀
+> C in "c programming language" stands for cringe and CVE 🚀
 
 > Wait its only time until rust(🚀) makes assembly memroy safe.🚀
 
