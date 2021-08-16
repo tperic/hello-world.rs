@@ -40,7 +40,11 @@ A clean build makes it take around 3.8G
 
 ![image](https://user-images.githubusercontent.com/57838468/129442903-8dd8ed8a-4afe-43f4-80b3-c082fb72f581.png)
 
-The CPU usage is pretty minimal too
+The CPU usage is pretty minimal too (release mode)
+
+![image](https://user-images.githubusercontent.com/57838468/129517521-a4ddba1d-10ad-4e00-9fd0-d307b5867351.png)
+![image](https://user-images.githubusercontent.com/57838468/129517580-87f1398d-6846-45b1-9492-d390c9e66c3f.png)
+
 
 ### Docker
 
