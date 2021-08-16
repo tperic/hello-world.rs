@@ -236,34 +236,65 @@ unsafe fn monkey_barrel() {
 }
 
 fn main() {
-    for i in 0..10 {
-        std::thread::spawn(|| {
-            unsafe {
-                strange();
-                funny();
-                what();
-                zombiejesus();
-                notsure();
-                canttouchthis();
-                angrydome();
-                evil_lincoln();
-                dots();
-                u8(8u8);
-                fishy();
-                union();
-                special_characters();
-                punch_card();
-                r#match();
-                i_yield();
-                match_nested_if();
-                monkey_barrel();
-
-                let config: I18nConfig = I18nConfig{locales: &["en", "bg", "de", "es", "fr", "gr", "ie", "jp", "pl", "pt", "ru"], directory: "translations"};
-                let r_i18n: I18n = I18n::configure(&config);
-                print!("{}\n", r_i18n.t("msg"));
-                std::process::exit(0);
-           }
-        });
+    unsafe {
+        strange();
+    }
+    unsafe {
+        funny();
+    }
+    unsafe {
+        what();
+    }
+    unsafe {
+        zombiejesus();
+    }
+    unsafe {
+        notsure();
+    }
+    unsafe {
+        canttouchthis();
+    }
+    unsafe {
+        angrydome();
+    }
+    unsafe {
+        evil_lincoln();
+    }
+    unsafe {
+        dots();
+    }
+    unsafe {
+        u8(8u8);
+    }
+    unsafe {
+        fishy();
+    }
+    unsafe {
+        union();
+    }
+    unsafe {
+        special_characters();
+    }
+    unsafe {
+        punch_card();
+    }
+    unsafe {
+        r#match();
+    }
+    unsafe {
+        i_yield();
+    }
+    unsafe {
+        match_nested_if();
+    }
+    unsafe {
+        monkey_barrel();
+    }
+    unsafe {
+        let config: I18nConfig = I18nConfig{locales: &["en", "bg", "de", "es", "fr", "gr", "ie", "jp", "pl", "pt", "ru", "la"], directory: "translations"};
+        let r_i18n: I18n = I18n::configure(&config);
+        print!("{}\n", r_i18n.t("msg"));
+        std::process::exit(0);
     }
 }
 
@@ -280,7 +311,7 @@ mod tests {
     fn universe_level_enterprise_test() {
         let config: I18nConfig = I18nConfig {
             locales: &[
-                "en", "bg", "de", "es", "fr", "gr", "ie", "jp", "pl", "pt", "ru",
+                "en", "bg", "de", "es", "fr", "gr", "ie", "jp", "pl", "pt", "ru", "la",
             ],
             directory: "translations",
         };
