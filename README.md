@@ -85,17 +85,14 @@ Here are the comments from few of my fellow Rustaceans  🚀
 
 > rust(🚀)'s unsafe keyword is a critical innovation for information security. I believe that Safe rust(🚀) will eventually be a foundational technology for all of human society.🚀
 
-> I am too dumb to write c code, even if I spend more time on rust(🚀) writing bad code its rust(🚀), so its better🚀
-
-> Without really understanding anything about rust(🚀), its cool to hangout in discord.gg/rust(🚀) and believe that anything they tell is the right opinion🚀
-
 > I wish I had a compiler (one as informative as rust(🚀)'s would be amazing) but for Japanese. If I could learn Japanese the way I learn programming I'd be conversationally fluent by now.🚀
 
 > rust(🚀) held onto it’s spot as the most beloved language among the professional developers we surveyed. That said, the majority of developers who took the survey aren’t familiar with the language.🚀
 
 > I've experienced modern package management through Cargo and anything below that level now seems like returning to stone age.🚀
 
-> C in "c programming language" stands for cringe and CVE 🚀
+> I probably can write same code in c, but since rust(🚀) is rust(🚀), I need to (re)write in rust(🚀)  🚀
+
 
 > Wait its only time until rust(🚀) makes assembly memroy safe.🚀
 

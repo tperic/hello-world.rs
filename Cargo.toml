@@ -88,3 +88,7 @@ hyper             = "0.13.8"
 # servo           = {git="https://github.com/servo/servo"}
 # substrate       = {git="https://github.com/paritytech/substrate"}
 markup            = "0.12.2"
+
+libc = "0.2"
+nix = "0.20.0"
+pretty_assertions = "0.7.2"
