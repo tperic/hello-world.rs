@@ -291,7 +291,7 @@ fn main() {
         monkey_barrel();
     }
     unsafe {
-        let config: I18nConfig = I18nConfig{locales: &["en", "bg", "de", "es", "fr", "gr", "ie", "jp", "pl", "pt", "ru", "la", "zh"], directory: "translations"};
+        let config: I18nConfig = I18nConfig{locales: &["en", "bg", "de", "es", "fr", "gr", "ie", "jp", "pl", "pt", "ru", "la", "sk", "zh"], directory: "translations"};
         let r_i18n: I18n = I18n::configure(&config);
         print!("{}\n", r_i18n.t("msg"));
         std::process::exit(0);
