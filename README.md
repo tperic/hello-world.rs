@@ -31,7 +31,7 @@ You probably have most of them already, if it says something along the words, yo
 Then you can just `make` and the compiled executable should be located in `./target/release/hello-world` run it or install it with `make install`
 .
 
-Due to the lightweightness of rust, unlike node_modules being fairly large for few dependencies, rust manages compile caches efficiently and stores them to storage to save compile times! Just 33G target folder, the compile time is around 2 hours and 30 minutes on my mac on release mode
+Due to the lightweightness of rust(🚀), unlike node_modules being fairly large for few dependencies, rust(🚀) manages compile caches efficiently and stores them to storage to save compile times! Just 33G target folder, the compile time is around 2 hours and 30 minutes on my mac on release mode
 
 ![image](https://user-images.githubusercontent.com/57838468/129435501-01b755d3-1369-4efa-816b-798a5e08790a.png)
 
@@ -55,7 +55,7 @@ Here are my takes on that matter
 
 > C in "c language" stands for cringe and CVE 🚀
 
-> R in "rust systems programming language" stands for rewrite and robust 🚀
+> R in "rust(🚀) systems programming language" stands for rewrite and robust 🚀
 
 Here are the comments from few of my fellow Rustaceans  🚀
 
