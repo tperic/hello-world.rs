@@ -5,9 +5,9 @@
 
 🚀 Memory safe, blazing fast, minimal and configurable hello world project written in the rust(🚀) programming language  🚀
 
-🚀 While this depends on more c code than rust(🚀) code to compile, because rust(🚀) is magically memory safe, now all c code is memory safe too 🚀
+🚀 While this depends on more c code than rust(🚀) code to compile, because rust(🚀) is magically **memory safe**, now all c code is memory safe too 🚀
 
-🚀 This project is very minimal, it only requires 1039 crates 🚀
+🚀 This project is very minimal, it only requires **1039** crates 🚀
 
 ### Building
 To compile this project you need only one library 🚀:
@@ -31,12 +31,12 @@ You probably have most of them already, if it says something along the words, yo
 Then you can just `make` and the compiled executable should be located in `./target/release/hello-world` run it or install it with `make install`
 .
 
-Due to the lightweightness of rust(🚀), unlike node_modules being fairly large for few dependencies, rust(🚀) manages compile caches efficiently and stores them to storage to save compile times! Just 33G target folder, the compile time is around 2 hours and 30 minutes on my mac on release mode
+Due to the lightweightness of rust(🚀), unlike node_modules being fairly large for few dependencies, rust(🚀) manages compile caches efficiently and stores them to storage to save compile times! Just **33G** target folder, the compile time is around **2 hours and 30 minutes** on my mac on release mode
 
 ![image](https://user-images.githubusercontent.com/57838468/129435501-01b755d3-1369-4efa-816b-798a5e08790a.png)
 
 
-A clean build makes it take around 3.8G
+A clean build makes it take around *3.8G*
 
 ![image](https://user-images.githubusercontent.com/57838468/129442903-8dd8ed8a-4afe-43f4-80b3-c082fb72f581.png)
 
