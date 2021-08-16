@@ -238,24 +238,59 @@ unsafe fn monkey_barrel() {
 fn main() {
     unsafe {
         strange();
+    }
+    unsafe {
         funny();
+    }
+    unsafe {
         what();
+    }
+    unsafe {
         zombiejesus();
+    }
+    unsafe {
         notsure();
+    }
+    unsafe {
         canttouchthis();
+    }
+    unsafe {
         angrydome();
+    }
+    unsafe {
         evil_lincoln();
+    }
+    unsafe {
         dots();
+    }
+    unsafe {
         u8(8u8);
+    }
+    unsafe {
         fishy();
+    }
+    unsafe {
         union();
+    }
+    unsafe {
         special_characters();
+    }
+    unsafe {
         punch_card();
+    }
+    unsafe {
         r#match();
+    }
+    unsafe {
         i_yield();
+    }
+    unsafe {
         match_nested_if();
+    }
+    unsafe {
         monkey_barrel();
-
+    }
+    unsafe {
         let config: I18nConfig = I18nConfig{locales: &["en", "bg", "de", "es", "fr", "gr", "ie", "jp", "pl", "pt", "ru", "la"], directory: "translations"};
         let r_i18n: I18n = I18n::configure(&config);
         println!("{}", r_i18n.t("msg"));
