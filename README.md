@@ -40,6 +40,8 @@ A clean build makes it take around 3.8G
 
 ![image](https://user-images.githubusercontent.com/57838468/129442903-8dd8ed8a-4afe-43f4-80b3-c082fb72f581.png)
 
+The CPU usage is pretty minimal too
+
 ### Docker
 
 ```sh
@@ -48,6 +50,12 @@ $ docker run -it --rm --name hwrs hello-world
 ```
 
 ### Why rust(🚀) while its only 1 line and depends on 600 c bind crates?
+
+Here are my takes on that matter
+
+> C in "c language" stands for cringe and CVE 🚀
+
+> R in "rust systems programming language" stands for rewrite and robust 🚀
 
 Here are the comments from few of my fellow Rustaceans  🚀
 

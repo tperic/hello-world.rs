@@ -84,4 +84,6 @@ textwrap          = "0.14.2"
 nom               = "6"
 hyper             = "0.13.8"
 
-# servo             = {git="https://github.com/servo/servo"}
+# servo           = {git="https://github.com/servo/servo"}
+# substrate       = {git="https://github.com/paritytech/substrate"}
+markup            = "0.12.2"
