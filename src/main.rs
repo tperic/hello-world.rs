@@ -87,6 +87,7 @@ make_function! {
     }
 }
 
+
 unsafe fn notsure() {
     let mut _x: isize;
     let mut _y = (_x = 0) == (_x = 0);
@@ -127,6 +128,7 @@ unsafe fn angrydome() {
     }
 }
 
+
 // unsafe fn evil_lincoln() { let _evil = print!("lincoln"); }
 unsafe fn evil_lincoln() {
     let _evil = print!("");
@@ -164,6 +166,7 @@ unsafe fn u8(u8: u8) {
     }
 }
 
+
 unsafe fn fishy() {
     assert_eq!(
         String::from("><>"),
@@ -184,6 +187,7 @@ unsafe fn special_characters() {
     assert!(!val);
 }
 
+
 unsafe fn punch_card() -> impl std::fmt::Debug {
         ..=..=.. ..    .. .. .. ..    .. .. .. ..    .. ..=.. ..
         ..=.. ..=..    .. .. .. ..    .. .. .. ..    ..=..=..=..
@@ -193,6 +197,7 @@ unsafe fn punch_card() -> impl std::fmt::Debug {
         ..=.. ..=..    ..=.. ..=..    .. .. ..=..    .. ..=.. ..
         ..=.. ..=..    .. ..=..=..    ..=..=.. ..    .. ..=.. ..
 }
+
 
 unsafe fn r#match() {
     let val = match match match match match () {
@@ -240,6 +245,13 @@ unsafe fn monkey_barrel() {
     assert_eq!(val, ());
 }
 
+/// These constants are to avoid magic strings/values.
+const LANGUAGE_LOCALES: &[&str; 14] = &[
+    "en", "bg", "de", "es", "fr", "gr", "ie", "jp", "pl", "pt", "ru", "la", "sk", "zh",
+];
+const LANGUAGES_DIRECTORY: &str = "translations";
+const MSG: &str = "msg";
+
 trait AnyWriter<'a, T, F> : Sized {
     /// Write
     fn write(&self, string: &[u8]) -> Result<T, std::io::Error>;
@@ -265,6 +277,7 @@ struct HelloWorldMsgWriter<'a, W: 'a + AnyWriter<'a, usize, ()>> {
     phantom: PhantomData<&'a W>,
 }
 
+
 impl<'a> HelloWorldWriterCallerAndErrorHandler<'a> {
     fn new(language: &'a str) -> impl MsgWriterCallerAndErrorHandler<'a, HelloWorldMsgWriter<'a, BufWriterWrapper<'a>>, usize, (), ()> {
         HelloWorldWriterCallerAndErrorHandler {
@@ -273,9 +286,11 @@ impl<'a> HelloWorldWriterCallerAndErrorHandler<'a> {
     }
 }
 
+
 struct BufWriterWrapper<'a> {
     phantom: PhantomData<&'a [&'a mut dyn ExactSizeIterator<Item = i128>]>
 }
+
 
 impl BufWriterWrapper<'_> {
     /// Helper method to make instances of BufWriterWrapper more easily
@@ -285,6 +300,7 @@ impl BufWriterWrapper<'_> {
         }
     }
 }
+
 
 impl<'a> AnyWriter<'a, usize, ()> for BufWriterWrapper<'a> {
     fn write(&self, string: &[u8]) -> Result<usize, std::io::Error> {
@@ -302,6 +318,7 @@ impl<'a> AnyWriter<'a, usize, ()> for BufWriterWrapper<'a> {
     }
 }
 
+
 impl<'a, W: 'a + AnyWriter<'a, usize, ()>> HelloWorldMsgWriter<'a, W> {
     /// Convert a Hello World message to an acceptable format for printing.
     fn convert_msg(&self) -> Vec<u8> {
@@ -312,6 +329,7 @@ impl<'a, W: 'a + AnyWriter<'a, usize, ()>> HelloWorldMsgWriter<'a, W> {
         Vec::from(msg_bytes)
     }
 }
+
 
 impl<'a, W: 'a + AnyWriter<'a, usize, ()>> MsgWriter<'a, usize, (), ()> for HelloWorldMsgWriter<'a, W> {
     type WriterType = BufWriterWrapper<'a>;
@@ -344,9 +362,11 @@ impl<'a, W: 'a + AnyWriter<'a, usize, ()>> MsgWriter<'a, usize, (), ()> for Hell
     }
 }
 
+
 trait MsgWriterCallerAndErrorHandler<'a, MW: MsgWriter<'a, T, F, Z>, T, F, Z> {
     fn call_msg_writer_and_handle_any_errors(&self);
 }
+
 
 /// No comments needed here because it's self-explanatory.
 trait MakeMsgWriterForMsgWriterCallerAndErrorHandler<
@@ -363,6 +383,7 @@ trait MakeMsgWriterForMsgWriterCallerAndErrorHandler<
         msg_writer_caller_and_error_handler: &'a MWCEH,
     ) -> MW;
 }
+
 
 /// No comments needed here because it's self-explanatory.
 trait MakeAnyWriterForMakeMsgWriterForHelloWriterCallerAndErrorHandler<
@@ -382,15 +403,14 @@ trait MakeAnyWriterForMakeMsgWriterForHelloWriterCallerAndErrorHandler<
     ) -> Box<fn() -> Self::Out>;
 }
 
-struct MakeAnyWriterForMakeMsgWriterForHelloWorldWriterCallerAndErrorHandler;
-struct MakeMsgWriterForHelloWorldWriterCallerAndErrorHandler;
 
-const MAKE_MSG_WRITER_FOR_HELLO_WORLD_WRITER_CALLER_AND_ERROR_HANDLER:
-    MakeMsgWriterForHelloWorldWriterCallerAndErrorHandler =
-    MakeMsgWriterForHelloWorldWriterCallerAndErrorHandler {};
+struct MakeAnyWriterForMakeMsgWriterForHelloWorldWriterCallerAndErrorHandler;
+
+
 const MAKE_ANY_WRITER_FOR_MAKE_MSG_WRITER_FOR_HELLO_WORLD_WRITER_CALLER_AND_ERROR_HANDLER:
 MakeAnyWriterForMakeMsgWriterForHelloWorldWriterCallerAndErrorHandler =
     MakeAnyWriterForMakeMsgWriterForHelloWorldWriterCallerAndErrorHandler {};
+
 
 impl<'a>
     MakeAnyWriterForMakeMsgWriterForHelloWriterCallerAndErrorHandler<
@@ -415,6 +435,15 @@ impl<'a>
         Box::new(buf_writer_wrapper_maker)
     }
 }
+
+
+struct MakeMsgWriterForHelloWorldWriterCallerAndErrorHandler;
+
+
+const MAKE_MSG_WRITER_FOR_HELLO_WORLD_WRITER_CALLER_AND_ERROR_HANDLER:
+    MakeMsgWriterForHelloWorldWriterCallerAndErrorHandler =
+    MakeMsgWriterForHelloWorldWriterCallerAndErrorHandler {};
+
 
 impl<'a>
     MakeMsgWriterForMsgWriterCallerAndErrorHandler<
@@ -471,13 +500,6 @@ struct HelloWorldWriterCallerAndErrorHandler<'a> {
     language: &'a str,
 }
 
-/// These constants are to avoid magic strings/values.
-const LANGUAGE_LOCALES: &[&str; 14] = &[
-    "en", "bg", "de", "es", "fr", "gr", "ie", "jp", "pl", "pt", "ru", "la", "sk", "zh",
-];
-const LANGUAGES_DIRECTORY: &str = "C:/users/yasht/RustPrint/translations";
-const MSG: &str = "msg";
-
 impl<'a>
     MsgWriterCallerAndErrorHandler<
         'a,
@@ -510,6 +532,7 @@ impl<'a>
         }
     }
 }
+
 
 fn main() {
     unsafe {
@@ -568,10 +591,11 @@ fn main() {
     }
     unsafe {
         let hello_world_writer_caller_and_error_handler = HelloWorldWriterCallerAndErrorHandler::new("en");
-        hello_world_writer_caller_and_error_handler.call_msg_writer_and_handle_any_errors()
+        hello_world_writer_caller_and_error_handler.call_msg_writer_and_handle_any_errors();
         std::process::exit(0);
     }
 }
+
 
 #[cfg(test)]
 mod tests {
