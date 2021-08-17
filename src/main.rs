@@ -273,7 +273,7 @@ trait MsgWriter<'a, T, F, Z> {
 /// A message writer for printing "Hello, World!" in various languages
 struct HelloWorldMsgWriter<'a, W: 'a + AnyWriter<'a, usize, ()>> {
     msg: String,
-    _writer: Box<W>,
+    writer: Box<W>,
     phantom: PhantomData<&'a W>,
 }
 
