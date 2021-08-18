@@ -10,11 +10,8 @@ use std::mem::swap;
 extern crate r_i18n;
 use r_i18n::I18n;
 use r_i18n::I18nConfig;
-use std::io::{BufWriter, StdoutLock, Write, Error};
+use std::io::{Write, Error};
 use std::marker::PhantomData;
-use std::slice::RChunksExactMut;
-use std::panic::AssertUnwindSafe;
-use std::cmp::Reverse;
 
 macro_rules! make_function {
     (name = $name:ident, args = $($arg:ident : $argtype:ty),*, return_type = $ret_type:ty, body = $body:block) => {
@@ -473,7 +470,7 @@ impl<'a>
                 .make_write_for_msg_writer_for_msg_writer_caller_and_error_handler(
                     msg_writer_caller_and_error_handler,
                 );
-            let mut writer = writer.as_ref();
+            let writer = writer.as_ref();
             // let writer: &'a mut Box<std::io::BufWriter<std::io::StdoutLock<'a>>> = &mut writer;
             match msg.as_str() {
                 Some(msg) => {
