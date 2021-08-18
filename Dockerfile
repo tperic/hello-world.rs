@@ -6,12 +6,6 @@ LABEL maintainer="mTvare6"
 
 LABEL memory_safe=true
 
-SHELL ['/bin/bash']
-
-USER root
-
-ENV USER=root
-
 WORKDIR /usr/src/hello-world
 COPY . .
 
