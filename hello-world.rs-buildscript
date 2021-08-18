@@ -8,4 +8,4 @@
 git clone ${source}
 cd hello-world.rs
 make
-cp ./target/release/hello-world ${prefix}/bin/
+make install PREFIX=${prefix}
