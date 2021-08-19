@@ -2,7 +2,7 @@ pkgname='hello-world-git'
 _pkgname='hello-world.rs'
 pkgver=0.1.0.r88.3d04247
 pkgrel=1
-arch=('x86_64' 'i686')
+arch=(x86_64 i686 pentium4 armv6h armv7h aarch64)
 url="https://github.com/mTvare6/hello-world.rs"
 pkgdesc="Memory safe, blazing fast, configurable, minimal hello world written in rust under 1 line of code with few dependencies"
 license=('custom')
@@ -10,7 +10,7 @@ makedepends=(rust cargo git)
 depends=(cairo gtk3 alsa-lib glfw-x11 freetype2 glib2 pango atk gdk-pixbuf2)
 provides=('hello-world')
 conflicts=('hello-world')
-source=("git://github.com/mTvare6/hello-world.rs")
+source=("git+https://github.com/mTvare6/hello-world.rs")
 sha256sums=('SKIP')
 
 pkgver() {
