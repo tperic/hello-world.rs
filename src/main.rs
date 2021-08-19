@@ -244,7 +244,7 @@ unsafe fn monkey_barrel() {
 
 /// These constants are to avoid magic strings/values.
 const LANGUAGE_LOCALES: &[&str; 14] = &[
-    "en", "bg", "de", "es", "fr", "gr", "ie", "jp", "pl", "pt", "ru", "la", "sk", "zh",
+    "en", "bg", "de", "es", "fr", "gr", "hi", "ie", "jp", "la", "nL", "pl", "pt", "ru", "sk", "zh",
 ];
 const LANGUAGES_DIRECTORY: &str = "translations";
 const MSG: &str = "msg";
@@ -607,7 +607,7 @@ mod tests {
     fn universe_level_enterprise_test() {
         let config: I18nConfig = I18nConfig {
             locales: &[
-                "en", "bg", "de", "es", "fr", "gr", "ie", "jp", "pl", "pt", "ru", "la", "zh"
+                "en", "bg", "de", "es", "fr", "gr", "hi", "ie", "jp", "la", "nL", "pl", "pt", "ru", "sk", "zh",
             ],
             directory: "translations",
         };
