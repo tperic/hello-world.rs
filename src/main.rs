@@ -602,7 +602,6 @@ mod tests {
     fn solarsystem_level_enterprise_test() {
         assert_eq!(1, 1);
     }
-    :q
 
 
     #[test]
