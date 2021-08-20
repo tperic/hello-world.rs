@@ -243,8 +243,8 @@ unsafe fn monkey_barrel() {
 }
 
 /// These constants are to avoid magic strings/values.
-const LANGUAGE_LOCALES: &[&str; 14] = &[
-    "en", "bg", "de", "es", "fr", "gr", "hi", "ie", "jp", "la", "nl", "pl", "pt", "ru", "sk", "zh",
+const LANGUAGE_LOCALES: &[&str; 17] = &[
+    "en", "bg", "de", "es", "fr", "gr", "hi", "ie", "jp", "la", "nl", "pl", "pt", "ru", "sk", "zh", "eo"
 ];
 const LANGUAGES_DIRECTORY: &str = "translations";
 const MSG: &str = "msg";
