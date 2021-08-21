@@ -23,8 +23,8 @@ jobs:
       - uses: Swatinem/rust-cache@v1
       - name: Build it
         run: make
-      - name: tests
-        run: make test
+      # - name: tests
+      #   run: make test
       - name: 'export binary'
         uses: actions/upload-artifact@v2
         with:

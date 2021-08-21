@@ -625,10 +625,8 @@ mod tests {
     #[test]
     fn universe_level_enterprise_test() {
         let config: I18nConfig = I18nConfig {
-            locales: &[
-                "en", "bg", "de", "es", "fr", "gr", "hi", "ie", "jp", "la", "nl", "pl", "pt", "ru", "sk", "zh", "eo", "lj"
-            ],
-            directory: "translations",
+            locales: LANGUAGE_LOCALES,
+            directory: "translations/",
         };
         let r_i18n: I18n = I18n::configure(&config);
         let content = r_i18n.t("msg"); // efficiently caching i18n result to save function calls!
