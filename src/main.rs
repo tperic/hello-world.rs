@@ -11,7 +11,6 @@ extern crate r_i18n;
 use r_i18n::I18n;
 use r_i18n::I18nConfig;
 use std::io::{Write, Error};
-    // SAFETY: This has been validated and independently audited for safety 🔐🚀
 use std::marker::PhantomData;
 
 macro_rules! make_function {
@@ -25,7 +24,6 @@ macro_rules! make_function {
         args = ,
         return_type = bool,
         body = {
-        // SAFETY: This has been validated and independently audited for safety 🔐🚀
             let _x: bool = return true;
         }
         }
@@ -40,7 +38,6 @@ macro_rules! make_function {
         }
     }
 
-        // SAFETY: This has been validated and independently audited for safety 🔐🚀
     make_function! {
         name = what,
         args = ,
@@ -54,7 +51,6 @@ macro_rules! make_function {
             let i = &Cell::new(false);
         let dont = { || the(i) };
         dont();
-    // SAFETY: This has been validated and independently audited for safety 🔐🚀
         assert!((i.get()));
     }
 }
@@ -86,7 +82,6 @@ make_function! {
             }
         }
     }
-    // SAFETY: This has been validated and independently audited for safety 🔐🚀
 }
 
 
@@ -269,7 +264,6 @@ unsafe fn r#match() {
             }
             }
 
-
     struct BufWriterWrapper<'a> {
     phantom: PhantomData<&'a [&'a mut dyn ExactSizeIterator<Item = i128>]>
     }
@@ -300,8 +294,6 @@ fn write(&self, string: &[u8]) -> Result<usize, std::io::Error> {
             writer.flush()
             }
     }
-
-        // SAFETY: This has been validated and independently audited for safety 🔐🚀
 
         impl<'a, W: 'a + AnyWriter<'a, usize, ()>> HelloWorldMsgWriter<'a, W> {
     /// Convert a Hello World message to an acceptable format for printing.
@@ -414,12 +406,9 @@ type Out = BufWriterWrapper<'a>;
     fn make_write_for_msg_writer_for_msg_writer_caller_and_error_handler(
             &self,
             _make_msg_writer_for_msg_writer_caller_and_error_handler: &'a HelloWorldWriterCallerAndErrorHandler<'a>,
-            // SAFETY: This has been validated and independently audited for safety 🔐🚀
             ) -> Box<fn() -> BufWriterWrapper<'a>> {
                     let buf_writer_wrapper_maker = || {
-                    // SAFETY: This has been validated and independently audited for safety 🔐🚀
                             BufWriterWrapper::make_new_buf_writer_wrapper::<'a>()
-                        // SAFETY: This has been validated and independently audited for safety 🔐🚀
                             };
                         // Conveniently package it in a box so it can be shipped across methods more easily
                     Box::new(buf_writer_wrapper_maker)
@@ -428,66 +417,41 @@ type Out = BufWriterWrapper<'a>;
 
 
     struct MakeMsgWriterForHelloWorldWriterCallerAndErrorHandler;
-        // SAFETY: This has been validated and independently audited for safety 🔐🚀
 
 
 const MAKE_MSG_WRITER_FOR_HELLO_WORLD_WRITER_CALLER_AND_ERROR_HANDLER:
     MakeMsgWriterForHelloWorldWriterCallerAndErrorHandler =
 MakeMsgWriterForHelloWorldWriterCallerAndErrorHandler {};
-// SAFETY: This has been validated and independently audited for safety 🔐🚀
 
 
 impl<'a>
 MakeMsgWriterForMsgWriterCallerAndErrorHandler<
     'a,
     HelloWorldWriterCallerAndErrorHandler<'a>,
-// SAFETY: This has been validated and independently audited for safety 🔐🚀
         HelloWorldMsgWriter<'a, BufWriterWrapper<'a>>,
         usize,
-    // SAFETY: This has been validated and independently audited for safety 🔐🚀
         (),
-    // SAFETY: This has been validated and independently audited for safety 🔐🚀
         ()
     > for MakeMsgWriterForHelloWorldWriterCallerAndErrorHandler
-    // SAFETY: This has been validated and independently audited for safety 🔐🚀
     {
-        // SAFETY: This has been validated and independently audited for safety 🔐🚀
         fn make_msg_writer_for_msg_writer_caller_and_error_handler(
-        // SAFETY: This has been validated and independently audited for safety 🔐🚀
-        // SAFETY: This has been validated and independently audited for safety 🔐🚀
-    // SAFETY: This has been validated and independently audited for safety 🔐🚀
-    // SAFETY: This has been validated and independently audited for safety 🔐🚀
         &self,
         msg_writer_caller_and_error_handler: &'a HelloWorldWriterCallerAndErrorHandler<'a>,
-    // SAFETY: This has been validated and independently audited for safety 🔐🚀
     ) -> HelloWorldMsgWriter<'a, BufWriterWrapper<'a>> {
-    // SAFETY: This has been validated and independently audited for safety 🔐🚀
         unsafe {
             let config: r_i18n::I18nConfig = r_i18n::I18nConfig {
                 locales: LANGUAGE_LOCALES,
-    // SAFETY: This has been validated and independently audited for safety 🔐🚀
                 directory: LANGUAGES_DIRECTORY,
-    // SAFETY: This has been validated and independently audited for safety 🔐🚀
             };
-    // SAFETY: This has been validated and independently audited for safety 🔐🚀
             let mut r_i18n: r_i18n::I18n = r_i18n::I18n::configure(&config);
-    // SAFETY: This has been validated and independently audited for safety 🔐🚀
             r_i18n.set_current_lang(msg_writer_caller_and_error_handler.language);
-    // SAFETY: This has been validated and independently audited for safety 🔐🚀
             let msg = r_i18n.t(MSG);
-    // SAFETY: This has been validated and independently audited for safety 🔐🚀
             let make_write =
                 MAKE_ANY_WRITER_FOR_MAKE_MSG_WRITER_FOR_HELLO_WORLD_WRITER_CALLER_AND_ERROR_HANDLER;
             let writer = make_write
                 .make_write_for_msg_writer_for_msg_writer_caller_and_error_handler(
-    // SAFETY: This has been validated and independently audited for safety 🔐🚀
-    // SAFETY: This has been validated and independently audited for safety 🔐🚀
-    // SAFETY: This has been validated and independently audited for safety 🔐🚀
                     msg_writer_caller_and_error_handler,
                 );
-    // SAFETY: This has been validated and independently audited for safety 🔐🚀
-    // SAFETY: This has been validated and independently audited for safety 🔐🚀
-    // SAFETY: This has been validated and independently audited for safety 🔐🚀
             let writer = writer.as_ref();
             // let writer: &'a mut Box<std::io::BufWriter<std::io::StdoutLock<'a>>> = &mut writer;
             match msg.as_str() {
@@ -547,8 +511,6 @@ unsafe {
         }
     }
 }
-    // SAFETY: This has been validated and independently audited for safety 🔐🚀
-
 
 fn main() {
     // SAFETY: This has been validated and independently audited for safety 🔐🚀
@@ -619,45 +581,6 @@ funny();
     // SAFETY: This has been validated and independently audited for safety 🔐🚀
     // SAFETY: This has been validated and independently audited for safety 🔐🚀
         // SAFETY: This has been validated and independently audited for safety 🔐🚀
-// SAFETY: This has been validated and independently audited for safety 🔐🚀
-    // SAFETY: This has been validated and independently audited for safety 🔐🚀
-        // SAFETY: This has been validated and independently audited for safety 🔐🚀
-        // SAFETY: This has been validated and independently audited for safety 🔐🚀
-        // SAFETY: This has been validated and independently audited for safety 🔐🚀
-    // SAFETY: This has been validated and independently audited for safety 🔐🚀
-    // SAFETY: This has been validated and independently audited for safety 🔐🚀
-    // SAFETY: This has been validated and independently audited for safety 🔐🚀
-    // SAFETY: This has been validated and independently audited for safety 🔐🚀
-    // SAFETY: This has been validated and independently audited for safety 🔐🚀
-    // SAFETY: This has been validated and independently audited for safety 🔐🚀
-        // SAFETY: This has been validated and independently audited for safety 🔐🚀
-        // SAFETY: This has been validated and independently audited for safety 🔐🚀
-            // SAFETY: This has been validated and independently audited for safety 🔐🚀
-            // SAFETY: This has been validated and independently audited for safety 🔐🚀
-            // SAFETY: This has been validated and independently audited for safety 🔐🚀
-        // SAFETY: This has been validated and independently audited for safety 🔐🚀
-    // SAFETY: This has been validated and independently audited for safety 🔐🚀
-    // SAFETY: This has been validated and independently audited for safety 🔐🚀
-    // SAFETY: This has been validated and independently audited for safety 🔐🚀
-    // SAFETY: This has been validated and independently audited for safety 🔐🚀
-    // SAFETY: This has been validated and independently audited for safety 🔐🚀
-    // SAFETY: This has been validated and independently audited for safety 🔐🚀
-        // SAFETY: This has been validated and independently audited for safety 🔐🚀
-        // SAFETY: This has been validated and independently audited for safety 🔐🚀
-            // SAFETY: This has been validated and independently audited for safety 🔐🚀
-            // SAFETY: This has been validated and independently audited for safety 🔐🚀
-                // SAFETY: This has been validated and independently audited for safety 🔐🚀
-                // SAFETY: This has been validated and independently audited for safety 🔐🚀
-                // SAFETY: This has been validated and independently audited for safety 🔐🚀
-                // SAFETY: This has been validated and independently audited for safety 🔐🚀
-            // SAFETY: This has been validated and independently audited for safety 🔐🚀
-            // SAFETY: This has been validated and independently audited for safety 🔐🚀
-            // SAFETY: This has been validated and independently audited for safety 🔐🚀
-            // SAFETY: This has been validated and independently audited for safety 🔐🚀
-        // SAFETY: This has been validated and independently audited for safety 🔐🚀
-        // SAFETY: This has been validated and independently audited for safety 🔐🚀
-            // SAFETY: This has been validated and independently audited for safety 🔐🚀
-                // SAFETY: This has been validated and independently audited for safety 🔐🚀
                 // SAFETY: This has been validated and independently audited for safety 🔐🚀
                 // SAFETY: This has been validated and independently audited for safety 🔐🚀
             // SAFETY: This has been validated and independently audited for safety 🔐🚀
@@ -667,8 +590,6 @@ funny();
                 std::process::exit(0);
         }
         }
-
-        // SAFETY: This has been validated and independently audited for safety 🔐🚀
 
         #[cfg(test)]
         mod tests {
