@@ -11,7 +11,7 @@ use std::marker::PhantomData;
 
     /// These constants are to avoid magic strings/values.
     const LANGUAGE_LOCALES: &[&str; 17] = &[
-        "en", "bg", "de", "es", "fr", "gr", "hi", "ie", "jp", "la", "nl", "pl", "pt", "ru", "sk", "zh", "eo"
+        "en", "bg", "de", "es", "fr", "gr", "hi", "ie", "jp", "la", "nl", "pl", "pt", "ru", "sk", "zh", "eo", "tr"
     ];
     const LANGUAGES_DIRECTORY: &str = "translations";
     const MSG: &str = "msg";
