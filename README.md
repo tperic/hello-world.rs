@@ -48,6 +48,7 @@ The CPU usage is pretty minimal too (release mode)
 ![image](https://user-images.githubusercontent.com/57838468/131794591-22ba9516-2bdb-4eea-bab7-2f26e5e05755.png)
 
 It is slower than echo but memory safety comes at a cost! We need to be memory chad and blazing pure and lightning based
+
 Benchmark by [cypercine](https://github.com/mTvare6/cypercine)
 
 
