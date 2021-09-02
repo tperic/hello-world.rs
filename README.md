@@ -45,6 +45,8 @@ The CPU usage is pretty minimal too (release mode)
 ![image](https://user-images.githubusercontent.com/57838468/129517521-a4ddba1d-10ad-4e00-9fd0-d307b5867351.png)
 ![image](https://user-images.githubusercontent.com/57838468/129517580-87f1398d-6846-45b1-9492-d390c9e66c3f.png)
 
+![image](https://user-images.githubusercontent.com/57838468/131794591-22ba9516-2bdb-4eea-bab7-2f26e5e05755.png)
+It is slower than echo but memory safety comes at a cost! We need to be memory chad and blazing pure and lightning based
 
 ### Docker
 
