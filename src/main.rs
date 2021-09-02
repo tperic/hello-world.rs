@@ -10,9 +10,7 @@ use std::io::{Write, Error};
 use std::marker::PhantomData;
 
     /// These constants are to avoid magic strings/values.
-    const LANGUAGE_LOCALES: &[&str; 17] = &[
-        "en", "bg", "de", "es", "fr", "gr", "hi", "ie", "jp", "la", "nl", "pl", "pt", "ru", "sk", "zh", "eo", "tr"
-    ];
+    const LANGUAGE_LOCALES: &[&str; 18] = &["en", "es", "bg", "de", "eo", "fr", "gr", "hi", "ie", "jp", "la", "nl", "pl", "pt", "ru", "sk", "tr", "zh"];
     const LANGUAGES_DIRECTORY: &str = "translations";
     const MSG: &str = "msg";
 
@@ -225,10 +223,11 @@ MakeMsgWriterForMsgWriterCallerAndErrorHandler<
         msg_writer_caller_and_error_handler: &'a HelloWorldWriterCallerAndErrorHandler<'a>,
     ) -> HelloWorldMsgWriter<'a, BufWriterWrapper<'a>> {
         unsafe {
-            let config: r_i18n::I18nConfig = r_i18n::I18nConfig {
-                locales: LANGUAGE_LOCALES,
-                directory: LANGUAGES_DIRECTORY,
-            };
+            let config: r_i18n::I18nConfig = r_i18n::I18nConfig{locales: LANGUAGE_LOCALES, directory: LANGUAGES_DIRECTORY};
+            // let config: I18nConfig = I18nConfig {
+            //     locales: LANGUAGE_LOCALES,
+            //     directory: LANGUAGES_DIRECTORY,
+            // };
             let mut r_i18n: r_i18n::I18n = r_i18n::I18n::configure(&config);
             r_i18n.set_current_lang(msg_writer_caller_and_error_handler.language);
             let msg = r_i18n.t(MSG);
