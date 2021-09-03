@@ -1,15 +1,13 @@
-🚀 hello-world.rs 🚀
---------------
+## 🚀 hello-world.rs 🚀
 
-
-
-🚀 Memory safe, blazing fast, minimal and configurable hello world project written in the rust(🚀) programming language  🚀
+🚀 Memory safe, blazing fast, minimal and configurable hello world project written in the rust(🚀) programming language 🚀
 
 🚀 While this depends on more c code than rust(🚀) code to compile, because rust(🚀) is magically **memory safe**, now all c code is memory safe too 🚀
 
-🚀 This project is very minimal, it only requires **1091** crates 🚀
+🚀 This project is very minimal, it only requires **1092** crates 🚀
 
 ### Building
+
 To compile this project you need only one library 🚀:
 
 <div>1. <a href="https://www.cairographics.org/download/">cairo development libraries</a> 🚀.</div>
@@ -35,8 +33,7 @@ Due to the lightweightness of rust(🚀), unlike node_modules being fairly large
 
 ![image](https://user-images.githubusercontent.com/57838468/129435501-01b755d3-1369-4efa-816b-798a5e08790a.png)
 
-
-A clean build makes it take around *3.8G*
+A clean build makes it take around _3.8G_
 
 ![image](https://user-images.githubusercontent.com/57838468/129442903-8dd8ed8a-4afe-43f4-80b3-c082fb72f581.png)
 
@@ -50,8 +47,6 @@ The CPU usage is pretty minimal too (release mode)
 It is slower than echo but memory safety comes at a cost! We need to be memory chad and blazing pure and lightning based
 
 Benchmark by [cypercine](https://github.com/mTvare6/cypercine)
-
-
 
 ### Docker
 
@@ -68,7 +63,7 @@ Here are my takes on that matter
 
 > R in "rust(🚀) systems programming language" stands for rewrite and robust 🚀
 
-Here are the comments from few of my fellow Rustaceans  🚀
+Here are the comments from few of my fellow Rustaceans 🚀
 
 > People ask the question "what's rust(🚀) good for?" pretty frequently, and little terminal apps like this are precisely the reason. [...]. It enables a kind of workflow that simply didn't exist before: I could have a fully safe, "correct", LLVM-optimized binary installed on my desktop in an afternoon.🚀
 
@@ -98,8 +93,7 @@ Here are the comments from few of my fellow Rustaceans  🚀
 
 > I've experienced modern package management through Cargo and anything below that level now seems like returning to stone age.🚀
 
-> I probably can write same code in c, but since rust(🚀) is rust(🚀), I need to (re)write in rust(🚀)  🚀
-
+> I probably can write same code in c, but since rust(🚀) is rust(🚀), I need to (re)write in rust(🚀) 🚀
 
 > Wait its only time until rust(🚀) makes assembly memroy safe.🚀
 
