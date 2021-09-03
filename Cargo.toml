@@ -101,3 +101,5 @@ num = "0.4"
 uwuify = "^0.2"
 
 actix-web = "3.3.2"
+
+french-numbers = "1.1.2"
