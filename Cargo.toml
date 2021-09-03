@@ -99,3 +99,5 @@ futures = "0.3"
 num = "0.4"
 
 uwuify = "^0.2"
+
+actix-web = "3.3.2"
