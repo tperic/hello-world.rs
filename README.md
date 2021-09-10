@@ -31,18 +31,18 @@ Then you can just `make` and the compiled executable should be located in `./tar
 
 Due to the lightweightness of rust(🚀), unlike node_modules being fairly large for few dependencies, rust(🚀) manages compile caches efficiently and stores them to storage to save compile times! Just **33G** target folder, the compile time is only around **2 hours and 30 minutes** on my mac on release mode
 
-![image](https://user-images.githubusercontent.com/57838468/129435501-01b755d3-1369-4efa-816b-798a5e08790a.png)
+![🚀](/ast/before.png)
 
 A clean build makes it take around _3.8G_
 
-![image](https://user-images.githubusercontent.com/57838468/129442903-8dd8ed8a-4afe-43f4-80b3-c082fb72f581.png)
+![🚀](/ast/after.png)
 
 The CPU usage is pretty minimal too (release mode)
 
-![image](https://user-images.githubusercontent.com/57838468/129517521-a4ddba1d-10ad-4e00-9fd0-d307b5867351.png)
-![image](https://user-images.githubusercontent.com/57838468/129517580-87f1398d-6846-45b1-9492-d390c9e66c3f.png)
+![🚀](/ast/cpu_usage.png)
+![🚀](/ast/cpu_temp.png)
 
-![image](https://user-images.githubusercontent.com/57838468/131794591-22ba9516-2bdb-4eea-bab7-2f26e5e05755.png)
+![🚀](/ast/lib_benchmark.png)
 
 It is slower than echo but memory safety comes at a cost! We need to be memory chad and blazing pure and lightning based
 
