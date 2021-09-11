@@ -48,7 +48,16 @@ It is slower than echo but memory safety comes at a cost! We need to be memory c
 
 Benchmark by [cypercine](https://github.com/mTvare6/cypercine)
 
-### Docker
+### Installation
+
+#### Arch Linux
+
+```sh
+$ makepkg -si
+$ pacman -U <package>.pkg.tar.xz
+```
+
+#### Docker
 
 ```sh
 $ docker build -t hello-world .
