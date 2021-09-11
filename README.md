@@ -64,6 +64,12 @@ $ docker build -t hello-world .
 $ docker run -it --rm --name hwrs hello-world
 ```
 
+#### Nix
+
+```sh
+$ nix-env -i -f default.nix
+```
+
 #### Shade
 
 ```sh
