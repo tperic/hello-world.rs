@@ -48,11 +48,33 @@ It is slower than echo but memory safety comes at a cost! We need to be memory c
 
 Benchmark by [cypercine](https://github.com/mTvare6/cypercine)
 
-### Docker
+### Installation
+
+#### Arch Linux
+
+```sh
+$ makepkg -si
+$ pacman -U <package>.pkg.tar.xz
+```
+
+#### Docker
 
 ```sh
 $ docker build -t hello-world .
 $ docker run -it --rm --name hwrs hello-world
+```
+
+#### Nix
+
+```sh
+$ nix-env -i -f default.nix
+```
+
+#### Shade
+
+```sh
+$ cp ./hello-world.rs-buildscript <prefix>/user/main/hello-world.rs
+$ shade install hello-world.rs
 ```
 
 ### Why rust(🚀) while its only 1 line and depends on 600 c bind crates?
