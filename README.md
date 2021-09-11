@@ -64,6 +64,13 @@ $ docker build -t hello-world .
 $ docker run -it --rm --name hwrs hello-world
 ```
 
+#### Shade
+
+```sh
+$ cp ./hello-world.rs-buildscript <prefix>/user/main/hello-world.rs
+$ shade install hello-world.rs
+```
+
 ### Why rust(🚀) while its only 1 line and depends on 600 c bind crates?
 
 Here are my takes on that matter
