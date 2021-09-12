@@ -11,9 +11,11 @@ extern crate r_i18n;
 use french_numbers::*;
 
     /// These constants are to avoid magic strings/values.
-                        const LANGUAGE_LOCALES: &[&str; 18] = &["en", "es", "bg", "de", "eo", "fr", "gr", "hi", "ie", "jp", "la", "nl", "pl", "pt", "ro", "ru", "sk", "tr", "zh"];
-const LANGUAGES_DIRECTORY: &str = "translations";
-const MSG: &str = "msg";
+
+    const LANGUAGE_LOCALES: &[&str; 19] = &["en", "es", "bg", "de", "eo", "fr", "gr", "hi", "ie", "jp", "la", "nl", "pl", "pt", "ro", "ru", "sk", "tr", "zh"];
+    const LANGUAGES_DIRECTORY: &str = "translations";
+    const MSG: &str = "msg";
+
 
     trait AnyWriter<'a, T, F> : Sized {
                     /// Write
@@ -114,7 +116,8 @@ fn write(&self, string: &[u8]) -> Result<usize, std::io::Error> {
                         // is the best because not only is it verbose, it also separates what you
                                 // want to format from the template so that you have no idea which argument
                                     // is being inserted where. How thoughtful of Rust!
-                                                        format!("Oh dear, only {} bytes were written!", french_number(n_bytes, &PRE_REFORM_FEMININE)),
+                                    format!("Oh dear, only {} bytes were written!", french_number_options(n_bytes, &PRE_REFORM_FEMININE)),
+
                                 ))
                         } else {
                             // Always flush, especially when you are in public.
