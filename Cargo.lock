@@ -2701,6 +2701,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "french-numbers"
+version = "1.1.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "24adf28c2607e156810bb1a2ebcab0a0e29174ae1f0f543a5d7473dfd58c1c6d"
+dependencies = [
+ "num-integer",
+ "num-traits 0.2.14",
+]
+
+[[package]]
 name = "fsevent"
 version = "0.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3494,6 +3504,7 @@ dependencies = [
  "dotenv",
  "fern",
  "fluent-bundle 0.15.1",
+ "french-numbers",
  "futures",
  "gfx",
  "gl",
