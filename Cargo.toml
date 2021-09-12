@@ -81,8 +81,6 @@ amethyst          = { version = "0.15.3", features = ["empty"] }
 textwrap          = "0.14.2"
 nom               = "6"
 hyper             = "0.13.8"
-# servo           = {git="https://github.com/servo/servo"}
-# substrate       = {git="https://github.com/paritytech/substrate"}
 markup            = "0.12.2"
 nix               = "0.20.0"
 pretty_assertions = "0.7.2"
@@ -93,4 +91,3 @@ futures = "0.3"
 num = "0.4"
 uwuify = "^0.2"
 actix-web = "3.3.2"
-
