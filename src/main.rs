@@ -1,25 +1,27 @@
 #![feature(destructuring_assignment)]
-    #![feature(generators)]
-#![allow(non_camel_case_types)]
+                                                                                #![feature(generators)]
+                                #![allow(non_camel_case_types)]
     #![allow(dead_code)]
-        #![allow(unreachable_code)]
-    #![allow(unused_braces, unused_must_use, unused_parens)]
-#![recursion_limit = "256"]
+            #![allow(unreachable_code)]
+                                                                                                                    #![allow(unused_braces, unused_must_use, unused_parens)]
+                                                #![recursion_limit = "256"]
 extern crate r_i18n;
-use std::io::{Write, Error};
-use std::marker::PhantomData;
+                                                                                                use std::io::{Write, Error};
+                    use std::marker::PhantomData;
 use french_numbers::*;
 
     /// These constants are to avoid magic strings/values.
+
     const LANGUAGE_LOCALES: &[&str; 19] = &["en", "es", "bg", "de", "eo", "fr", "gr", "hi", "ie", "jp", "la", "nl", "pl", "pt", "ro", "ru", "sk", "tr", "zh"];
     const LANGUAGES_DIRECTORY: &str = "translations";
     const MSG: &str = "msg";
 
+
     trait AnyWriter<'a, T, F> : Sized {
-        /// Write
-        fn write(&self, string: &[u8]) -> Result<T, std::io::Error>;
-        /// Flush
-        fn flush(&self, string: &[u8]) -> Result<F, std::io::Error>;
+                    /// Write
+fn write(&self, string: &[u8]) -> Result<T, std::io::Error>;
+/// Flush
+                    fn flush(&self, string: &[u8]) -> Result<F, std::io::Error>;
     }
 
         trait MsgWriter<'a, T, F, Z> {
@@ -42,8 +44,8 @@ use french_numbers::*;
 
 
         impl<'a> HelloWorldWriterCallerAndErrorHandler<'a> {
-                fn new(language: &'a str) -> impl MsgWriterCallerAndErrorHandler<'a, HelloWorldMsgWriter<'a, BufWriterWrapper<'a>>, usize, (), ()> {
-                    HelloWorldWriterCallerAndErrorHandler {
+                        fn new(language: &'a str) -> impl MsgWriterCallerAndErrorHandler<'a, HelloWorldMsgWriter<'a, BufWriterWrapper<'a>>, usize, (), ()> {
+            HelloWorldWriterCallerAndErrorHandler {
                     language
                     }
             }
@@ -56,7 +58,7 @@ use french_numbers::*;
 
     impl BufWriterWrapper<'_> {
     /// Helper method to make instances of BufWriterWrapper more easily
-    fn make_new_buf_writer_wrapper<'a>() -> BufWriterWrapper<'a> {
+                            fn make_new_buf_writer_wrapper<'a>() -> BufWriterWrapper<'a> {
         BufWriterWrapper {
                                     phantom: PhantomData
         }
@@ -67,7 +69,7 @@ use french_numbers::*;
     impl<'a> AnyWriter<'a, usize, ()> for BufWriterWrapper<'a> {
 fn write(&self, string: &[u8]) -> Result<usize, std::io::Error> {
     let stdout = std::io::stdout();
-    let lock = stdout.lock();
+                        let lock = stdout.lock();
         let mut writer = std::io::BufWriter::new(lock);
             writer.write(string)
             }
@@ -93,7 +95,7 @@ fn write(&self, string: &[u8]) -> Result<usize, std::io::Error> {
 
 
         impl<'a, W: 'a + AnyWriter<'a, usize, ()>> MsgWriter<'a, usize, (), ()> for HelloWorldMsgWriter<'a, W> {
-            type WriterType = BufWriterWrapper<'a>;
+                        type WriterType = BufWriterWrapper<'a>;
 
                 /// Write "Hello, world!" using an object that implements Write.
                 /// Here, we take advantage of Rust's robust error handling and amazing pattern matching.
@@ -115,6 +117,7 @@ fn write(&self, string: &[u8]) -> Result<usize, std::io::Error> {
                                 // want to format from the template so that you have no idea which argument
                                     // is being inserted where. How thoughtful of Rust!
                                     format!("Oh dear, only {} bytes were written!", french_number_options(n_bytes, &PRE_REFORM_FEMININE)),
+
                                 ))
                         } else {
                             // Always flush, especially when you are in public.
@@ -170,7 +173,7 @@ trait MakeAnyWriterForMakeMsgWriterForHelloWriterCallerAndErrorHandler<
 
 
                 const MAKE_ANY_WRITER_FOR_MAKE_MSG_WRITER_FOR_HELLO_WORLD_WRITER_CALLER_AND_ERROR_HANDLER:
-                MakeAnyWriterForMakeMsgWriterForHelloWorldWriterCallerAndErrorHandler =
+                                    MakeAnyWriterForMakeMsgWriterForHelloWorldWriterCallerAndErrorHandler =
                     MakeAnyWriterForMakeMsgWriterForHelloWorldWriterCallerAndErrorHandler {};
 
 
@@ -229,40 +232,40 @@ MakeMsgWriterForMsgWriterCallerAndErrorHandler<
             //     locales: LANGUAGE_LOCALES,
             //     directory: LANGUAGES_DIRECTORY,
             // };
-            let mut r_i18n: r_i18n::I18n = r_i18n::I18n::configure(&config);
-            r_i18n.set_current_lang(msg_writer_caller_and_error_handler.language);
+        let mut r_i18n: r_i18n::I18n = r_i18n::I18n::configure(&config);
+        r_i18n.set_current_lang(msg_writer_caller_and_error_handler.language);
             let msg = r_i18n.t(MSG);
-            let make_write =
+                let make_write =
                 MAKE_ANY_WRITER_FOR_MAKE_MSG_WRITER_FOR_HELLO_WORLD_WRITER_CALLER_AND_ERROR_HANDLER;
             let writer = make_write
-                .make_write_for_msg_writer_for_msg_writer_caller_and_error_handler(
+        .make_write_for_msg_writer_for_msg_writer_caller_and_error_handler(
                     msg_writer_caller_and_error_handler,
                 );
-            let writer = writer.as_ref();
-            // let writer: &'a mut Box<std::io::BufWriter<std::io::StdoutLock<'a>>> = &mut writer;
-            match msg.as_str() {
-                Some(msg) => {
-                    let msg = msg;
-                    let msg = String::from(msg);
-                    // let msg = &msg;
-                    // Rust's amazing initialization shorthand feature lets us initialize structs
-                    // without doing msg: msg explicitly!
-                    let msg_writer: HelloWorldMsgWriter<
-                        'a,
-                        BufWriterWrapper<'a>,
-                    > = HelloWorldMsgWriter { msg, writer: Box::new((writer)()), phantom: PhantomData };
+                let writer = writer.as_ref();
+                    // let writer: &'a mut Box<std::io::BufWriter<std::io::StdoutLock<'a>>> = &mut writer;
+                    match msg.as_str() {
+                            Some(msg) => {
+                                let msg = msg;
+                                let msg = String::from(msg);
+                            // let msg = &msg;
+                            // Rust's amazing initialization shorthand feature lets us initialize structs
+                            // without doing msg: msg explicitly!
+                            let msg_writer: HelloWorldMsgWriter<
+                            'a,
+                    BufWriterWrapper<'a>,
+                            > = HelloWorldMsgWriter { msg, writer: Box::new((writer)()), phantom: PhantomData };
                     msg_writer
-                }
-                None => {
-                    panic!("{}", format!("Oh dear, msg is {} and not a string", msg));
-                }
-            }
         }
-    }
+            None => {
+                            panic!("{}", format!("Oh dear, msg is {} and not a string", msg));
+                }
+}
+            }
+                }
 }
 
-struct HelloWorldWriterCallerAndErrorHandler<'a> {
-    language: &'a str,
+                        struct HelloWorldWriterCallerAndErrorHandler<'a> {
+language: &'a str,
 }
 
 impl<'a>
@@ -278,7 +281,7 @@ fn call_msg_writer_and_handle_any_errors(&self) {
 unsafe {
     let make_msg_writer = MAKE_MSG_WRITER_FOR_HELLO_WORLD_WRITER_CALLER_AND_ERROR_HANDLER;
     let mut msg_writer =
-        make_msg_writer.make_msg_writer_for_msg_writer_caller_and_error_handler(self);
+                                make_msg_writer.make_msg_writer_for_msg_writer_caller_and_error_handler(self);
             let make_writer = MAKE_ANY_WRITER_FOR_MAKE_MSG_WRITER_FOR_HELLO_WORLD_WRITER_CALLER_AND_ERROR_HANDLER;
     let res = msg_writer.write_msg(&|| (make_writer.make_write_for_msg_writer_for_msg_writer_caller_and_error_handler(self).as_ref())());
     match res {
@@ -286,21 +289,21 @@ unsafe {
             // Woohoo, we're all good!
         }
         Err(e) => {
-            // We will panic so that Rust will give us an amazing stacktrace to debug.
-            // Of course, panic is just the name of the method, we're not actually
-            // panicking because we know this is Rust and nothing can go seriously
-            // wrong.
-                std::panic::panic_any(e)
+                            // We will panic so that Rust will give us an amazing stacktrace to debug.
+                                                                    // Of course, panic is just the name of the method, we're not actually
+// panicking because we know this is Rust and nothing can go seriously
+    // wrong.
+            std::panic::panic_any(e)
+                            }
             }
-        }
             std::process::exit(0);
         }
     }
 }
 
 fn main() {
-    // SAFETY: This has been validated and independently audited for safety 🔐🚀
-    // SAFETY: This has been validated and independently audited for safety 🔐🚀
+                                                                        // SAFETY: This has been validated and independently audited for safety 🔐🚀
+                                            // SAFETY: This has been validated and independently audited for safety 🔐🚀
     // SAFETY: This has been validated and independently audited for safety 🔐🚀
         // SAFETY: This has been validated and independently audited for safety 🔐🚀
                 // SAFETY: This has been validated and independently audited for safety 🔐🚀
@@ -314,22 +317,22 @@ fn main() {
         }
 
         #[cfg(test)]
-        mod tests {
-            use super::*;
+            mod tests {
+                use super::*;
 
-            #[test]
-            fn solarsystem_level_enterprise_test() {
-                    assert_eq!(1, 1);
-                }
+        #[test]
+        fn solarsystem_level_enterprise_test() {
+                assert_eq!(1, 1);
+            }
 
-                                            #[test]
-                fn universe_level_enterprise_test() {
-                let config: I18nConfig = I18nConfig {
-                        locales: LANGUAGE_LOCALES,
-                        directory: "translations/",
-                    };
-                    let r_i18n: I18n = I18n::configure(&config);
-                    let content = r_i18n.t("msg"); // efficiently caching i18n result to save function calls!
+                                    #[test]
+        fn universe_level_enterprise_test() {
+                let config: r_i18n::I18nConfig =r_i18n::I18nConfig {
+                                locales: LANGUAGE_LOCALES,
+                                        directory: "translations/",
+                            };
+                            let r_i18n: I18n = I18n::configure(&config);
+                        let content = r_i18n.t("msg"); // efficiently caching i18n result to save function calls!
                 assert_eq!(content, content);
         }
 }
