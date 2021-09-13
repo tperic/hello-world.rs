@@ -115,16 +115,7 @@ fn write(&self, string: &[u8]) -> Result<usize, std::io::Error> {
                         // is the best because not only is it verbose, it also separates what you
                                 // want to format from the template so that you have no idea which argument
                                     // is being inserted where. How thoughtful of Rust!
-<<<<<<< HEAD
-<<<<<<< HEAD
                                                         format!("Oh dear, only {} bytes were written!", french_number(n_bytes, &PRE_REFORM_FEMININE)),
-=======
-                                    format!("Oh dear, only {} bytes were written!", french_number_options(n_bytes, &PRE_REFORM_FEMININE)),
->>>>>>> af06199 (Fix #88)
-=======
-                                    format!("Oh dear, only {} bytes were written!", french_number_options(n_bytes, &PRE_REFORM_FEMININE)),
-
->>>>>>> 5a029fca9a9b2bbcfb405a1d62647ee47f45949e
                                 ))
                         } else {
                             // Always flush, especially when you are in public.
