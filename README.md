@@ -73,7 +73,7 @@ $ nix-env -i -f default.nix
 #### Shade
 
 ```sh
-$ cp ./hello-world.rs-buildscript <prefix>/user/main/hello-world.rs
+$ wget "https://raw.githubusercontent.com/mTvare6/hello-world.rs/master/hello-world.rs-buildscript" -O <prefix>/user/main/hello-world.rs
 $ shade install hello-world.rs
 ```
 
