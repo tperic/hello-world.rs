@@ -76,7 +76,7 @@ tensorflow        = "0.17.0"
 mp4parse          = "0.11.5"
 fluent-bundle     = "0.15.1"
 cssparser         = "0.28.1"
-plist             = "0.5.5" #macos support! with memory safety
+plist             = "1.2.1" #macos support! with memory safety
 webdriver         = "0.43.1"
 amethyst          = { version = "0.15.3", features = ["empty"] }
 textwrap          = "0.14.2"
