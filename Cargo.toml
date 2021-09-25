@@ -80,7 +80,7 @@ plist             = "0.5.5" #macos support! with memory safety
 webdriver         = "0.43.1"
 amethyst          = { version = "0.15.3", features = ["empty"] }
 textwrap          = "0.14.2"
-nom               = "6"
+nom               = "7"
 hyper             = "0.13.8"
 markup            = "0.12.2"
 nix               = "0.20.0"
