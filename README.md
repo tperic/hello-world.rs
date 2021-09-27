@@ -85,6 +85,9 @@ Here are my takes on that matter
 
 > R in "rust(🚀) systems programming language" stands for rewrite and robust 🚀
 
+> [It's because rust code is totally basedly chadly magically CVE safe, too, just like how it's memory pure, blazing chad and thread fast](https://github.com/mTvare6/hello-world.rs/issues/)
+
+
 Here are the comments from few of my fellow Rustaceans 🚀
 
 > People ask the question "what's rust(🚀) good for?" pretty frequently, and little terminal apps like this are precisely the reason. [...]. It enables a kind of workflow that simply didn't exist before: I could have a fully safe, "correct", LLVM-optimized binary installed on my desktop in an afternoon.🚀
@@ -121,6 +124,10 @@ Here are the comments from few of my fellow Rustaceans 🚀
 
 > Done lots of C/C++/Python is the past, just started learning node/JS recently. Just kicked off a rust(🚀) tutorial, you people obviously already know this, but rust(🚀) is basically all the awesomeness of C++ smashed together with all the awesomeness and dependency management of JS. Looking forward to learning more rust(🚀) in the future! 🚀
 
-> All C/C++ devs are absolute fools, they are wasting their time writing c/c++ when instead they could write in rust(🚀)!!!!
+> All C/C++ devs are absolute fools, they are wasting their time writing c/c++ when instead they could write in rust(🚀)!
 
-> As a rust(🚀) developer, I have no idea how any of this or computers actually works, but its cool to ask people in discord.gg/rust(🚀) for all help and write code🚀
+> [C devs are people who use leeches to cure diseases](https://matrix.to/#/!CkLhFPTTdUYTfxSNGd:libera.chat/$nlVNx5d4nW6dNd7Y_0M6feEdwln2xU_mIUOivwJaXgM?via=libera.chat&via=matrix.org&via=halogen.city)
+
+> As a rust(🚀) developer, I have no idea how any of my code or computers actually works, but its cool to ask people in discord.gg/rust(🚀) for all help and write code🚀
+
+I've recently added source to where I've got these quotes from, when I get time I will add sources to where there messages are from, for now some sources aren't marked
