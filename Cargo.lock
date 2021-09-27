@@ -3141,13 +3141,12 @@ checksum = "e01732b97afd8508eee3333a541b9f7610f454bb818669e66e90f5f57c93a776"
 
 [[package]]
 name = "glfw"
-version = "0.41.0"
+version = "0.42.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "dbb254ad1715644ab078c94372405bf061358b97969635ef7b09cf6f9437843e"
+checksum = "06a3f9afbfd6576fca75be1e5cfc6db259b3a9b65844d34890b0711e82953605"
 dependencies = [
  "bitflags",
  "glfw-sys",
- "log 0.4.14",
  "objc",
  "raw-window-handle 0.3.3",
  "semver 0.9.0",
