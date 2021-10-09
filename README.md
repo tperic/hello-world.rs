@@ -1,4 +1,4 @@
-## 🚀 hello-world.rs 🚀
+# 🚀 hello-world.rs 🚀
 
 🚀 Memory safe, blazing fast, minimal and configurable hello world project written in the rust(🚀) programming language 🚀
 
@@ -85,7 +85,7 @@ Here are my takes on that matter
 
 > R in "rust(🚀) systems programming language" stands for rewrite and robust 🚀
 
-> [It's because rust code is totally basedly chadly magically CVE safe, too, just like how it's memory pure, blazing chad and thread fast](https://github.com/mTvare6/hello-world.rs/issues/)
+> [Since hello-world.rs is written in blazingly pure, configurable, lightweight and memory pure rust(🚀) - the CVEs are secure, memory chad and blazing pure](https://github.com/mTvare6/hello-world.rs/issues/) 🚀
 
 
 Here are the comments from few of my fellow Rustaceans 🚀
@@ -126,7 +126,7 @@ Here are the comments from few of my fellow Rustaceans 🚀
 
 > All C/C++ devs are absolute fools, they are wasting their time writing c/c++ when instead they could write in rust(🚀)!
 
-> [C devs are people who use leeches to cure diseases](https://matrix.to/#/!CkLhFPTTdUYTfxSNGd:libera.chat/$nlVNx5d4nW6dNd7Y_0M6feEdwln2xU_mIUOivwJaXgM?via=libera.chat&via=matrix.org&via=halogen.city)
+> [C devs are people who use leeches to cure diseases](https://matrix.to/#/!CkLhFPTTdUYTfxSNGd:libera.chat/$nlVNx5d4nW6dNd7Y_0M6feEdwln2xU_mIUOivwJaXgM?via=libera.chat&via=matrix.org&via=halogen.city) 🚀
 
 > As a rust(🚀) developer, I have no idea how any of my code or computers actually works, but its cool to ask people in discord.gg/rust(🚀) for all help and write code🚀
 
