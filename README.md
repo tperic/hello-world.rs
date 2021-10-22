@@ -83,7 +83,7 @@ Here are my takes on that matter
 
 > C in "c language" stands for cringe and CVE 🚀
 
-> **R** in "rust(🚀) systems programming language" stands for **R**ewrite, **R**obust ans **S**ecure 🚀
+> **R** in "rust(🚀) systems programming language" stands for **R**ewrite, **R**obust and **S**ecure 🚀
 
 > [Since hello-world.rs is written in blazingly pure, configurable, lightweight and memory pure rust(🚀) - the CVEs are secure, memory chad and blazing pure](https://github.com/mTvare6/hello-world.rs/issues/) 🚀
 
