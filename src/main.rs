@@ -11,7 +11,7 @@ extern crate r_i18n;
 use french_numbers::*;
 
     /// These constants are to avoid magic strings/values.
-    const LANGUAGE_LOCALES: &[&str] = &["en", "es", "bg", "bn", "de", "eo", "fr", "gr", "hi", "ie", "jp", "kr", "la", "lt", "nl", "pl", "pt", "ro", "ru", "sk", "tr", "zh"];
+    const LANGUAGE_LOCALES: &[&str] = &["en", "es", "bg", "bn", "de", "eo", "fr", "gr", "hi", "ie", "jp", "kr", "la", "lt", "nl", "pl", "pt", "ro", "ru", "sk", "tr", "zh", "cs"];
     const LANGUAGES_DIRECTORY: &str = "translations";
     const MSG: &str = "msg";
 
