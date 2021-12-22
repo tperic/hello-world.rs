@@ -3600,6 +3600,7 @@ dependencies = [
  "serde",
  "serde_json",
  "serenity",
+ "setenv",
  "tempfile",
  "tensorflow",
  "textwrap 0.14.2",
@@ -7200,6 +7201,12 @@ dependencies = [
  "cmake",
  "pkg-config",
 ]
+
+[[package]]
+name = "setenv"
+version = "0.1.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d5ef81b975260e7b1f2d73d570b03f59a71d468c1a7723a9262f2680653cb29e"
 
 [[package]]
 name = "sha-1"
