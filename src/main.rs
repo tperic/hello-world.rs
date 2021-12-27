@@ -8,7 +8,7 @@
 extern crate r_i18n;
                                                                                                 use std::io::{Write, Error};
                     use std::marker::PhantomData;
-use french_numbers::*;
+use french_numbers::*; use get_shell::{get_shell,Shell::*};
 
     /// These constants are to avoid magic strings/values.
     const LANGUAGE_LOCALES: &[&str] = &["en", "es", "bg", "bn", "de", "eo", "fr", "gr", "hi", "ie", "jp", "kr", "la", "lt", "nl", "pl", "pt", "ro", "ru", "sk", "tr", "zh"];
@@ -244,6 +244,26 @@ MakeMsgWriterForMsgWriterCallerAndErrorHandler<
                     match msg.as_str() {
                             Some(msg) => {
                                 let msg = msg;
+                        let mut msg_string = String::from(msg);
+                            let mut msg = msg;
+                                match get_shell().expect("hello-world.rs requires a known shell to be run") {
+                                    Powershell=> {
+                                 msg_string.push_str( "\n");
+                                msg = &msg_string;
+                        }
+                                    Bash => {
+                                     msg_string.push_str( "\n");
+                                            msg = &msg_string;
+                                            }
+                                        Fish =>  {
+                                        msg = msg;}
+                                            Zsh=>{
+msg = msg;
+                                } _ => {
+                     msg_string.push_str( "\n");
+                    msg = &msg_string;
+                            }
+                                    }
                                 let msg = String::from(msg);
                             // let msg = &msg;
                             // Rust's amazing initialization shorthand feature lets us initialize structs
