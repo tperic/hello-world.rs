@@ -81,7 +81,7 @@ $ shade install hello-world.rs
 
 Here are my takes on that matter
 
-> C in "c language" stands for cringe and CVE 🚀
+> C in "c language" stands for **C**ringe and **C**VE 🤮
 
 > **R** in "rust(🚀) systems programming language" stands for **R**ewrite, **R**obust and **S**ecure 🚀
 
